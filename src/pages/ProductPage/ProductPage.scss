@@ -1,0 +1,85 @@
+.ProductPage-Layout {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.ProductPage-Breadcrumbs {
+  margin-bottom: 0.5rem;
+}
+
+.ProductPage-Row {
+  margin-bottom: 1.5rem;
+}
+
+.ProductPage-Title {
+  margin-bottom: 0.5rem;
+
+  &_withIcon {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+  }
+}
+
+.ProductPage-Show {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.ProductPage-Picture {
+  width: 100%;
+  max-width: 200px;
+}
+
+.ProductPage-Picture {
+  max-width: 200px;
+}
+
+.ProductPage-Text {
+  margin: 0;
+}
+
+.ProductPage-Shop {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.ProductPage-DescText {
+  margin-bottom: 0.75rem;
+}
+
+.ProductPage-ListItem {
+  padding: 0.25rem 0.25rem 1.25rem;
+
+  border-radius: inherit;
+  border: 1px solid #333;
+
+  &:not(:last-child) {
+    border-bottom: none;
+  }
+  
+  &_default {
+    background: #333;
+    border-bottom: none;
+
+    margin-bottom: 0.5rem;
+  }
+}
+
+.ProductPage-OldPriceInfo {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 0.25rem;
+}
+
+.ProductPage-Price {
+  margin-bottom: 0.25rem;
+
+  font-size: 1.75rem;
+}

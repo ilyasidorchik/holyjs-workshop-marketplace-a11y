@@ -1,0 +1,41 @@
+.Radio {
+  cursor: pointer;
+
+  &-Input {
+    display: none;
+
+    &:checked + .Radio-Row .Radio-FakeInput {
+      background-color: var(--secondary);
+      border-color: var(--warning);
+    }
+  }
+
+  &-Row {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+  }
+
+  &-FakeInput {
+    box-sizing: border-box;
+    width: 1rem;
+    height: 1rem;
+
+    background-color: var(--primary);
+    border: 0.3rem solid var(--primary);
+    border-radius: 50%;
+  }
+
+  &:hover {
+    .Radio-FakeInput {
+      background-color: var(--border);
+      border-color: var(--border);
+    }
+
+    .Radio-Input {
+      &:checked + .Radio-Row .Radio-FakeInput {
+        border-color: var(--warning-hover);
+      }
+    }  
+  }
+}

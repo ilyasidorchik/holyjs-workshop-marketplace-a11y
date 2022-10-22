@@ -1,0 +1,30 @@
+.TextField {
+  box-sizing: border-box;
+  padding: 0.65rem 0.75rem 0.75rem;
+
+  font-size: 1rem;
+  line-height: 1.25rem;
+  color: var(--primary);
+
+  border: 0.05rem solid var(--primary);
+  border-radius: 0.2rem;
+  background-color: var(--secondary);
+
+  outline: none;
+
+  &::-webkit-input-placeholder {
+    color: var(--primary);
+  }
+  
+  &:hover {
+    background-color: #333;
+  }
+
+  &:focus {
+    background-color: var(--secondary);
+
+    &::-webkit-input-placeholder {
+      color: var(--border);
+    }
+  }
+}
