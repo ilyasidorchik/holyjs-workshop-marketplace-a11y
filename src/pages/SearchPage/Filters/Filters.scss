@@ -1,0 +1,15 @@
+.SearchPage {
+  &-Filter {
+    margin-bottom: 1rem;
+  }
+
+  &-FilterTitle {
+    margin-bottom: 0.25rem;
+  }
+
+  &-FilterOptions {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+}

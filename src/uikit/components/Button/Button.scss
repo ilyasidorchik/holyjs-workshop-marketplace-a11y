@@ -1,0 +1,33 @@
+.Button {
+    padding: 0.6rem 0.9rem;
+  
+    border: none;
+    border-radius: 0.7rem;
+  
+    font-size: 1rem;
+    font-weight: 600;
+  
+    cursor: pointer;
+    outline: none;
+  
+    &_view {
+        &_default {
+            background-color: var(--warning);
+      
+            &:hover {
+                background-color: var(--warning-hover);
+            }
+        }
+
+        &_secondary {
+            background-color: #333;
+            color: var(--primary);
+            border: 0.05rem solid var(--primary);
+
+            &:hover {
+                background-color: #666;
+            }
+        }
+    }
+}
+  

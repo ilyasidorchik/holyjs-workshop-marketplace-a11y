@@ -1,0 +1,12 @@
+.UpsalePopup {
+  &-Title {
+    margin-bottom: 1.25rem;
+    color: var(--primary)
+  }
+
+  &-Panel {
+    display: flex;
+    align-items: baseline;
+    gap: 1rem;
+  }
+}

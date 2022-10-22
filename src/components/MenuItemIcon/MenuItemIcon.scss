@@ -1,0 +1,25 @@
+.MenuItemIcon {
+  position: relative;
+}
+
+.MenuItemCount {
+  position: absolute;
+  top: -0.5rem;
+  left: calc(100% - 0.5rem);
+
+  padding: 0 0.3rem;
+  height: 1rem;
+
+  font-size: 0.75rem;
+  line-height: 0.9rem;
+  text-align: center;
+  color: var(--primary);
+
+  background-color: var(--active);
+  border-radius: 1rem;
+  border: 0.2rem solid var(--secondary);
+}
+
+.MenuItemIconSvg {
+  fill: var(--primary);
+}
