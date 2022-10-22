@@ -1,0 +1,17 @@
+.Carousel {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.Carousel-Item {
+    max-width: 150px;
+}
+
+.Carousel-ItemPicture {
+    max-width: 100px;
+}
+
+.Carousel-ItemName {
+    display: block;
+    margin-bottom: 0.5rem;
+}
