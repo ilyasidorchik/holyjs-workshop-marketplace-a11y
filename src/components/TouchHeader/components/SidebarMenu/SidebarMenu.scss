@@ -1,0 +1,11 @@
+.SidebarMenu {
+  &-Link {
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 0.05rem solid var(--primary);
+
+    &:hover {
+      border-bottom-color: var(--active);
+    }
+  }
+}

@@ -1,0 +1,40 @@
+.Popup {
+  &-Paranja {
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 8990;
+    top: 0;
+    bottom: 0;
+    background: var(--secondary);
+    opacity: .8;
+  }
+
+  &-Wrapper {
+    overflow: auto;
+    z-index: 9010;
+    position: fixed;
+    top: 50%;
+    right: 0;
+    left: 0;
+
+    max-height: 100%;
+    padding: 54px 24px 24px;
+    
+    transform: translateY(-75%);
+  }
+
+  &-Content {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    width: 450px;
+    margin: 0 auto;
+    padding: 1.5rem;
+    
+    border: 0.05rem solid var(--border);
+    border-radius: 0.2rem;
+    background-color: var(--secondary);
+  }
+}

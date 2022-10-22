@@ -1,0 +1,27 @@
+.Title {
+    margin: 0;
+
+    &_size_xs {
+        font-size: 1rem;
+        font-weight: 800;
+        line-height: 1.25rem;
+    }
+
+    &_size_s {
+        font-weight: 400;
+        font-size: 1.25rem;
+        line-height: 1.5rem;
+    }
+
+    &_size_m {
+        font-weight: 500;
+        font-size: 1.5rem;
+        line-height: 1.75rem;
+    }
+
+    &_size_l {
+        font-weight: 700;
+        font-size: 1.75rem;
+        line-height: 2rem;
+    }
+}

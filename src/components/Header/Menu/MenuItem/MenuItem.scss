@@ -1,0 +1,19 @@
+.Header {
+  &-MenuItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &:not(.Link_active):hover {
+      .MenuItemIconSvg {
+        fill: var(--active);
+      }
+    } 
+  }
+
+  &-MenuItemText {
+    @media (max-width: 599px)  {
+      display: none;
+    }
+  }
+}

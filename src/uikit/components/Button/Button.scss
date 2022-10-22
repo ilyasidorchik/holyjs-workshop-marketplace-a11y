@@ -1,0 +1,42 @@
+.Button {
+    padding: 0.6rem 0.9rem;
+  
+    border: none;
+    border-radius: 0.7rem;
+  
+    color: var(--secondary);
+    font-size: 1rem;
+    font-weight: 600;
+  
+    cursor: pointer;
+    outline: none;
+
+    transition: all .12s ease-out;
+
+    &:active {
+        transform: scale(.97);
+    }
+  
+    &_view {
+        &_default {
+            background-color: var(--warning);
+      
+            &:hover,
+            &:active {
+                background-color: var(--warning-hover);
+            }
+        }
+
+        &_secondary {
+            background-color: #333;
+            color: var(--primary);
+            border: 0.05rem solid var(--primary);
+
+            &:hover,
+            &:active {
+                background-color: #666;
+            }
+        }
+    }
+}
+  
