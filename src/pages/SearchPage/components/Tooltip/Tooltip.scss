@@ -1,0 +1,47 @@
+.Tooltip {
+  position: absolute;
+  inset: -45px auto auto -153px;
+  
+  padding: 5px 10px;
+
+  color: #000;
+  white-space: nowrap;
+  
+  opacity: 0;
+  visibility: hidden;
+  background: #fff;
+  box-shadow:
+      0 11px 14px -7px rgb(255 255 255 / 30%);
+  border-radius: 4px;
+
+  transition: opacity 0.75s;
+
+  &_visible {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  &-Tail {
+    position: absolute;
+    top: 100%;
+    left: 165px;
+
+    transform: rotate(180deg);
+
+    width: 24px;
+    height: 24px;
+    pointer-events: none;
+  }
+
+  &-TailSvg {
+    display: block;
+  }
+
+  &-TailFill {
+    fill: var(--primary);
+  }
+
+  &-TailBorder {
+    fill: rgba(0,0,0,.05);
+  }
+}

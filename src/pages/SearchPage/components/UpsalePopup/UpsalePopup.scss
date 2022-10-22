@@ -1,0 +1,26 @@
+.UpsalePopup {
+  &-Title {
+    margin-bottom: 1.5rem;
+    color: var(--primary)
+  }
+
+  &-Item {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  &-ItemTitle {
+    margin-bottom: 0.5rem;
+  }
+
+  &-Image {
+    width: 5rem;
+  }
+
+  &-Panel {
+    display: flex;
+    align-items: baseline;
+    gap: 1rem;
+  }
+}
