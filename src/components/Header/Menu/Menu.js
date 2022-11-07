@@ -11,18 +11,24 @@ const Menu = () => {
     useContext(AppContext)
 
   return (
-    <div className="Header-Menu">
-      <MenuItem
-        text="Вишлист"
-        url="/wishlist"
-        count={wishlistCount}
-      />
-      <MenuItem
-        text="Корзина"
-        url="/cart"
-        count={cartCount}
-      />
-    </div>
+    <nav className="Header-Menu" aria-label="Меню">
+      <ul className="Header-List">
+        <li>
+          <MenuItem
+            text="Вишлист"
+            url="/wishlist"
+            count={wishlistCount}
+          />
+        </li>
+        <li>
+          <MenuItem
+            text="Корзина"
+            url="/cart"
+            count={cartCount}
+          />
+        </li>
+      </ul>
+    </nav>
   )
 }
 

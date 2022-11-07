@@ -1,4 +1,5 @@
 import { useContext } from 'react'
+import { Helmet } from 'react-helmet'
 
 import {
   Price,
@@ -11,6 +12,7 @@ import {
   Link,
   Button,
   Icon,
+  VisuallyHidden,
 } from 'uikit/components'
 
 import { AppContext } from 'hooks/useContextData'
@@ -24,13 +26,26 @@ const ProductPage = () => {
 
   return (
     <main className="ProductPage">
-      <div className="App-Layout ProductPage-Breadcrumbs">
-        <Link to="/search">Футболки</Link> ·{' '}
-        <Link to="/search">Холи</Link>
-      </div>
+      <Helmet>
+        <title>Футболка HolyJS</title>
+      </Helmet>
+      <nav
+        className="App-Layout ProductPage-Breadcrumbs"
+        aria-label="Хлебные крошки"
+      >
+        <ul className="ProductPage-List">
+          <li>
+            <Link to="/search">Футболки</Link>
+          </li>
+          <li>
+            <Link to="/search">Холи</Link>
+          </li>
+        </ul>
+      </nav>
       <div className="ProductPage-Layout App-Layout">
         <Title
           className="ProductPage-Title"
+          as="h1"
           size="l"
         >
           Футболка HolyJS
@@ -43,9 +58,13 @@ const ProductPage = () => {
               className="ProductPage-Picture"
               src={ProductPicture}
               alt="Футболка HolyJS"
+              aria-hidden={true}
             />
             <div className="ProductPage-Desc">
-              <Title className="ProductPage-Title">
+              <Title
+                className="ProductPage-Title"
+                as="h2"
+              >
                 Коротко о товаре
               </Title>
               <p className="ProductPage-Text">
@@ -59,19 +78,28 @@ const ProductPage = () => {
             </div>
           </div>
           <div className="ProductPage-Row">
-            <Title className="ProductPage-Title">
+            <Title
+              as="h2"
+              className="ProductPage-Title"
+            >
               Покупают с этим товаром
             </Title>
             <Carousel />
           </div>
           <div className="ProductPage-Row">
-            <Title className="ProductPage-Title">
+            <Title
+              as="h2"
+              className="ProductPage-Title"
+            >
               Вы недавно смотрели
             </Title>
             <Carousel />
           </div>
           <div className="ProductPage-Row">
-            <Title className="ProductPage-Title ProductPage-Title_withIcon">
+            <Title
+              as="h2"
+              className="ProductPage-Title ProductPage-Title_withIcon"
+            >
               <Icon name="desc" /> Описание
             </Title>
             <div>
@@ -104,6 +132,9 @@ const ProductPage = () => {
         </div>
 
         <div>
+          <VisuallyHidden as="h2">
+            Где купить
+          </VisuallyHidden>
           <div className="ProductPage-List">
             <div className="ProductPage-ListItem ProductPage-ListItem_default">
               <div>
@@ -120,7 +151,10 @@ const ProductPage = () => {
                   currency="RUR"
                 />
                 <div className="ProductPage-Shop">
-                  <Icon name="shop" />
+                  <Icon
+                    name="shop"
+                    aria-label="Магазин:"
+                  />
                   <i>Холи</i>
                 </div>
                 <Button onClick={addToCart}>

@@ -3,4 +3,10 @@
   grid-template-columns: 100px 1fr;
   gap: 1rem;
   margin-bottom: 1rem;
+
+  &-List {
+    margin: 0 0 1rem;
+    padding: 0;
+    list-style-type: none;
+  }
 }

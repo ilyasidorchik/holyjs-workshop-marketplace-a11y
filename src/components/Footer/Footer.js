@@ -15,6 +15,7 @@ const Footer = ({ className }) => {
         <img
           className="Footer-GithubLogo"
           src={GithubLogo}
+          alt="Репозиторий на Гитхабе:"
         />
         bit.ly/holymarket
       </a>

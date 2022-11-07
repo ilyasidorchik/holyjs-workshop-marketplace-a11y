@@ -3,9 +3,15 @@ import cx from 'classnames'
 
 import './Link.scss'
 
-const Link = ({ className, to, children }) => (
+const Link = ({
+  className,
+  to,
+  innerRef,
+  children,
+}) => (
   <NavLink
     className={cx('Link', className)}
+    ref={innerRef}
     to={to}
   >
     {children}

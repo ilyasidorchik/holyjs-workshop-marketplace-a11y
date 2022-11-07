@@ -1,12 +1,20 @@
+@import 'uikit/mixins/visually-hidden.scss';
+
 .Checkbox {
   cursor: pointer;
 
   &-Input {
-    display: none;
+    @include visually-hidden;
 
     &:checked + .Checkbox-Row .Checkbox-FakeInput {
       background-color: var(--secondary);
       border-color: var(--warning);
+    }
+
+    &:focus-visible + .Checkbox-Row .Checkbox-FakeInput {
+      box-shadow:
+            0 0 0 0.15rem var(--secondary),
+            0 0 0 0.3rem var(--warning);
     }
   }
 

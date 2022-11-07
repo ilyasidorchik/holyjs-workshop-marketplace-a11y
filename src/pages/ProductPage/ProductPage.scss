@@ -7,6 +7,21 @@
 
 .ProductPage-Breadcrumbs {
   margin-bottom: 0.5rem;
+
+
+}
+
+.ProductPage {
+  &-Breadcrumbs &-List {
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  &-List {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
 }
 
 .ProductPage-Row {

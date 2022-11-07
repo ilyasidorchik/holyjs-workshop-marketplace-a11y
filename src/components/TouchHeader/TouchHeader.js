@@ -33,13 +33,15 @@ const TouchHeader = ({ className }) => {
       </Button>
 
       <div>
-        <b>
-          <i>
-            Холи
-            <br />
-            Маркет
-          </i>
-        </b>
+        <Link to="/touch/search">
+          <b>
+            <i>
+              Холи
+              <br />
+              Маркет
+            </i>
+          </b>
+        </Link>
       </div>
 
       <Link to="/cart">

@@ -1,3 +1,5 @@
+@import 'uikit/mixins/visually-hidden.scss';
+
 .Header {
   &-MenuItem {
     display: flex;
@@ -13,7 +15,7 @@
 
   &-MenuItemText {
     @media (max-width: 599px)  {
-      display: none;
+      @include visually-hidden;
     }
   }
 }

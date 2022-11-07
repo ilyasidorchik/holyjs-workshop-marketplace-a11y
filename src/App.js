@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react'
 import {
   Routes,
   Route,
@@ -8,9 +9,11 @@ import {
   Header,
   TouchHeader,
   Footer,
+  SkipToContent,
 } from 'components'
 import IndexPage from 'pages/IndexPage'
 import SearchPage from 'pages/SearchPage'
+import TouchSearchPage from 'pages/TouchSearchPage'
 import ProductPage from 'pages/ProductPage'
 import WishlistPage from 'pages/WishlistPage'
 import CartPage from 'pages/CartPage'
@@ -21,6 +24,7 @@ import {
   AppContext,
   useContextData,
 } from 'hooks/useContextData'
+import { VisuallyHidden } from 'uikit/components'
 
 import './App.css'
 
@@ -31,9 +35,20 @@ function App() {
 
   useContextData()
 
+  const [title, setTitle] = useState(
+    document.title
+  )
+  useEffect(() => {
+    setTimeout(() => {
+      setTitle(document.title)
+    }, 0)
+  }, [location.pathname])
+
   return (
     <AppContext.Provider value={Data}>
       <div className="App">
+        <SkipToContent />
+
         {isTouch ? <TouchHeader /> : <Header />}
 
         <Routes>
@@ -44,6 +59,10 @@ function App() {
           <Route
             path="/search"
             element={<SearchPage />}
+          />
+          <Route
+            path="/touch/search"
+            element={<TouchSearchPage />}
           />
           <Route
             path="/product"
@@ -65,6 +84,16 @@ function App() {
         </Routes>
 
         <Footer />
+
+        <VisuallyHidden>
+          <span
+            role="status"
+            aria-live="polite"
+            aria-atomic="true"
+          >
+            Новая страница: {title}
+          </span>
+        </VisuallyHidden>
       </div>
     </AppContext.Provider>
   )

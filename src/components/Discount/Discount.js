@@ -1,9 +1,15 @@
-import cx from "classnames";
+import cx from 'classnames'
 
-import "./Discount.scss";
+import { VisuallyHidden } from 'uikit/components'
+
+import './Discount.scss'
 
 const Discount = ({ className, percent }) => (
-  <div className={cx("Discount", className)}>–{percent}%</div>
-);
+  <div className={cx('Discount', className)}>
+    <VisuallyHidden>Скидка:</VisuallyHidden>
+    <span aria-hidden="true">–</span>
+    {percent}%
+  </div>
+)
 
-export default Discount;
+export default Discount

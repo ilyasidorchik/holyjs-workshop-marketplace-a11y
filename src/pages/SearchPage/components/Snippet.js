@@ -8,16 +8,19 @@ import {
   Price,
   OldPrice,
   Discount,
+  Rating,
 } from 'components'
 import {
   Title,
   Button,
   Link,
+  VisuallyHidden,
 } from 'uikit/components'
 
 import UpsalePopup from './UpsalePopup'
 
 import './Snippet.scss'
+import Tooltip from './Tooltip'
 
 const Snippet = ({
   id,
@@ -47,22 +50,24 @@ const Snippet = ({
     addToWishlist()
   }
 
+  const [visibleHint, isVisibleHint] =
+    useState(false)
+  const showHint = () => {
+    isVisibleHint(true)
+  }
+  const hideHint = () => {
+    isVisibleHint(false)
+  }
+
   return (
     <>
       <Link to="/product">
         <div className="Snippet">
-          <div className="Snippet-Toolbar">
-            <Button
-              view="secondary"
-              onClick={onWishlistAdd}
-            >
-              ❤
-            </Button>
-          </div>
           <img
             className="Snippet-Picture"
             src={Picture}
             alt={title}
+            aria-hidden={true}
           />
           <div className="Snippet-Desc">
             <Title>{title}</Title>
@@ -88,13 +93,37 @@ const Snippet = ({
 
             <div className="Snippet-Shop">
               <i>Холи</i> ·
-              <div>{rating}</div> /
-              <div>{feedbackCount}</div>
+              <Rating value={rating} />{' '}
+              <span aria-hidden={true}>/</span>
+              <div>
+                <VisuallyHidden>
+                  Отзывы:
+                </VisuallyHidden>
+                {feedbackCount}
+              </div>
             </div>
 
             <Button onClick={onCartAdd}>
               В корзину
             </Button>
+          </div>
+
+          <div className="Snippet-Toolbar">
+            <Button
+              className="Snippet-ToolbarButton"
+              view="secondary"
+              onClick={onWishlistAdd}
+              onMouseOver={showHint}
+              // onFocus={showHint}
+              onMouseOut={hideHint}
+              // onLbur={hideHint}
+            >
+              ❤
+            </Button>
+            <Tooltip
+              className="Snippet-Tooltip"
+              visible={visibleHint}
+            />
           </div>
         </div>
       </Link>

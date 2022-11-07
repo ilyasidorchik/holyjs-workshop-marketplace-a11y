@@ -5,6 +5,10 @@
     -webkit-user-select: none;
     user-select: none;
     outline: none;
+    &:focus-visible {
+        outline: 0.15rem solid var(--warning);
+        outline-offset: 0.2rem;
+    }
 
     &_active {
         cursor: default;

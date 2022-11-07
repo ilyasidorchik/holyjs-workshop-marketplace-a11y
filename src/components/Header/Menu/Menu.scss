@@ -1,6 +1,13 @@
 .Header {
   &-Menu {
+    
+  }
+
+  &-List {
     display: flex;
     gap: 1rem;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
   }
 }

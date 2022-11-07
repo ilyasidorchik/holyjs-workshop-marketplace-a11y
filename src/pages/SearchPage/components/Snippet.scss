@@ -1,51 +1,74 @@
 .Snippet {
-    position: relative;
+  position: relative;
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 0.75rem;
+  padding: 0.5rem 0.75rem;
+  background-color: #18181a;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 12px 0 #0d234308;
 
-    display: flex;
-    gap: 1.5rem;
-    margin-bottom: 0.75rem;
-    padding: 0.5rem 0.75rem;
+  &-Picture {
+    width: 100%;
+    max-width: 125px;
+  }
 
-    background-color: #18181a;
-    border-radius: 0.75rem;
-    box-shadow: 0 4px 12px 0 #0d234308;
-    
-    &-Picture {
-        width: 100%;
-        max-width: 125px;
-    }
-
+  @media screen and (prefers-reduced-motion: reduce) {
     &-Toolbar {
-        position: absolute;
-        top: 0.5rem;
-        right: 0.5rem;
-
-        display: flex;
-        flex-direction: column;
-        gap: 0.25rem;
-
-        opacity: 0;
-        transition: opacity ease-in-out 0.25s;
+      position: absolute;
+      top: 0.5rem;
+      right: 0.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+      opacity: 0;
+      transition: none;
     }
-    &:hover {
-        .Snippet-Toolbar {
-            opacity: 1;
-        }
+  }
+
+  &-Toolbar {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    opacity: 0;
+    transition: opacity ease-in-out 0.25s;
+  }
+
+  &:hover,
+  &:focus-within {
+    .Snippet-Toolbar {
+      opacity: 1;
     }
+  }
 
-    &-PriceInfo {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.25rem;
+  //   &-Tooltip {
+  //     visibility: hidden;
+  //   }
 
-        color: var(--primary);
-    }
+  //   &-ToolbarButton {
+  //     &:hover,
+  //     &:focus {
+  //       & + .Snippet-Tooltip {
+  //         visibility: visible;
+  //         opacity: 1;
+  //       }
+  //     }
+  //   }
 
-    &-Shop {
-        display: flex;
-        gap: 0.25rem;
-        margin-bottom: 0.5rem;
+  &-PriceInfo {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem;
+    color: var(--primary);
+  }
 
-        color: var(--primary);
-    }    
+  &-Shop {
+    display: flex;
+    gap: 0.25rem;
+    margin-bottom: 0.5rem;
+    color: var(--primary);
+  }
 }

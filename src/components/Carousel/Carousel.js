@@ -32,10 +32,11 @@ const Carousel = () => {
         </Button>
       </div>
       <div className="Carousel-Item">
-        {/* eslint-disable-next-line jsx-a11y/alt-text */}
         <img
           className="Carousel-ItemPicture"
           src={ProductPicture}
+          alt="Футболка HolyJS"
+          aria-hidden={true}
         />
         <div className="Carousel-ItemName">
           Футболка HolyJS

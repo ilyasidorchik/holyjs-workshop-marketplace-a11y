@@ -7,6 +7,7 @@ const Button = ({
   view = 'default',
   onClick,
   children,
+  ...rest
 }) => (
   <button
     className={cx(
@@ -19,6 +20,7 @@ const Button = ({
       className
     )}
     onClick={onClick}
+    {...rest}
   >
     {children}
   </button>

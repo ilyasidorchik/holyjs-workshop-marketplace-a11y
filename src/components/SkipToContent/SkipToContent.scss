@@ -1,0 +1,26 @@
+.SkipToContent {
+  z-index: 1;
+  position: fixed;
+  top: 5px;
+  right: 0;
+  left: 0;
+
+  width: 350px;
+  margin: 0 auto;
+
+  padding: 0.9rem 1.25rem 1.25rem;
+  background-color: #000;
+
+  border: 1px solid #999;
+  border-radius: 8px;
+  box-shadow:
+    0 0.5rem 1.25rem -5px rgb(255 255 255 / 40%);
+
+  transform: translateY(-600%);
+  transition: transform 0.3s;
+
+  &:focus-within,
+  &_visible {
+    transform: translateY(0%);
+  }
+}
