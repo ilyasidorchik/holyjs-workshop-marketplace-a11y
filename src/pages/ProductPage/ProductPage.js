@@ -14,6 +14,7 @@ import {
   Button,
   Icon,
   Image,
+  VisuallyHidden,
 } from 'uikit/components'
 
 import { AppContext } from 'hooks/useContextData'
@@ -107,6 +108,9 @@ const ProductPage = () => {
         </div>
 
         <div>
+          <VisuallyHidden as="h2">
+            Все предложения
+          </VisuallyHidden>
           <List className="ProductPage-List">
             <ListItem className="ProductPage-ListItem ProductPage-ListItem_default">
               <div>

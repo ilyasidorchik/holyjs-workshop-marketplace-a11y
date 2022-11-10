@@ -22,7 +22,7 @@ npm start
 ```
 
 ## Ветки для ознакомления
-- После первого часа запушим в ветку `slot1` ([Гитхаб](https://github.com/ilyasidorchik/holyjs-workshop-marketplace-a11y/tree/slot1))
+- После первого часа запушим в ветку ``slot1`` ([Гитхаб](https://github.com/ilyasidorchik/holyjs-workshop-marketplace-a11y/tree/slot1))
 - После второго часа в ветку `slot2` ([Гитхаб](https://github.com/ilyasidorchik/holyjs-workshop-marketplace-a11y/tree/slot2))
 - Готовый код уже в `a11y-fix` ([Гитхаб](https://github.com/ilyasidorchik/holyjs-workshop-marketplace-a11y/tree/a11y-fix))
 

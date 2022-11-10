@@ -1,7 +1,7 @@
 import { useContext } from 'react'
 
 import { AppContext } from 'hooks/useContextData'
-import { List, ListItem } from 'uikit/components'
+import { List, ListItem, VisuallyHidden } from 'uikit/components'
 
 import Filters from './Filters'
 import Snippet from './components/Snippet'
@@ -13,11 +13,14 @@ const SearchPage = () => {
 
   return (
     <div className="SearchPage App-Layout">
-      <div>
+      <div id="filters">
+        <VisuallyHidden  as="h2">
+          Фильтры
+        </VisuallyHidden>
         <Filters />
       </div>
 
-      <List>
+      <List id="results">
         {search.data.map((item) => (
           <ListItem key={item.id}>
             <Snippet {...item} />
