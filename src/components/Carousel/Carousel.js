@@ -26,8 +26,11 @@ const Carousel = () => {
 
   return (
     <List className="Carousel">
-      {data.map(({ img, title, to, onClick }) => (
-        <ListItem className="Carousel-Item">
+      {data.map(({ img, title, to, onClick }, i) => (
+        <ListItem
+          className="Carousel-Item"
+          key={i}
+        >
           <Image
             className="Carousel-ItemPicture"
             src={img}

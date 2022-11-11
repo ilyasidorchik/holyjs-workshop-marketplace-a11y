@@ -12,6 +12,9 @@ box-shadow:
   0 0.5rem 1.25rem -5px rgb(255 255 255 / 40%);
 ```
 
+Пример озвучивания новой страницы:
+https://marcy.codes/prototypes/routing/example-6-final.html
+
 ## 2. UI Kit
 
 ### Рецепт доступной карточки товара
@@ -115,3 +118,6 @@ setupFilesAfterEnv: ['<rootDir>/jest-setup.js']
 Lighthouse
 https://github.com/GoogleChrome/lighthouse/blob/main/docs/readme.md#using-programmatically
 https://github.com/GoogleChrome/lighthouse-ci
+
+Альтернатива:
+https://github.com/dequelabs/axe-core

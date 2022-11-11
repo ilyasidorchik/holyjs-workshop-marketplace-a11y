@@ -1,4 +1,5 @@
 import { useContext } from 'react'
+import { Helmet } from 'react-helmet'
 
 import {
   Price,
@@ -28,6 +29,10 @@ const ProductPage = () => {
 
   return (
     <main className="ProductPage">
+      <Helmet>
+        <title>Футболка HolyJS</title>
+      </Helmet>
+
       <div className="App-Layout ProductPage-Breadcrumbs">
         <Link to="/search">Футболки</Link> ·{' '}
         <Link to="/search">Холи</Link>
@@ -63,13 +68,19 @@ const ProductPage = () => {
             </div>
           </div>
           <div className="ProductPage-Row">
-            <Title className="ProductPage-Title">
+            <Title
+              className="ProductPage-Title"
+              size="m"
+            >
               Покупают с этим товаром
             </Title>
             <Carousel />
           </div>
           <div className="ProductPage-Row">
-            <Title className="ProductPage-Title">
+            <Title
+              className="ProductPage-Title"
+              size="m"
+            >
               Вы недавно смотрели
             </Title>
             <Carousel />

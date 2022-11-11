@@ -11,7 +11,7 @@ import {
   Image,
 } from 'uikit/components'
 
-import Picture from '../assets/t-shirt.png'
+import Picture from '../Snippet/assets/t-shirt.png'
 
 import './UpsalePopup.scss'
 

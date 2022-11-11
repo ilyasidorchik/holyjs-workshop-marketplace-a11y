@@ -11,6 +11,8 @@ import {
 } from 'components'
 import IndexPage from 'pages/IndexPage'
 import SearchPage from 'pages/SearchPage'
+import TouchSearchPage from 'pages/TouchSearchPage'
+import TouchSearchPageFixed from 'pages/TouchSearchPageFixed'
 import ProductPage from 'pages/ProductPage'
 import WishlistPage from 'pages/WishlistPage'
 import CartPage from 'pages/CartPage'
@@ -25,7 +27,7 @@ import {
 import './App.css'
 
 function App() {
-  let location = useLocation()
+  const location = useLocation()
   const isTouch =
     location.pathname.includes('touch')
 
@@ -46,6 +48,14 @@ function App() {
             element={<SearchPage />}
           />
           <Route
+            path="/touch/search"
+            element={<TouchSearchPage />}
+          />
+          <Route
+            path="/touch/search-fixed"
+            element={<TouchSearchPageFixed />}
+          />
+          <Route
             path="/product"
             element={<ProductPage />}
           />
@@ -56,11 +66,6 @@ function App() {
           <Route
             path="/cart"
             element={<CartPage />}
-          />
-
-          <Route
-            path="/touch/search"
-            element={<SearchPage />}
           />
         </Routes>
 

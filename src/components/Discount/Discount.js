@@ -1,9 +1,11 @@
-import cx from "classnames";
+import cx from 'classnames'
 
-import "./Discount.scss";
+import './Discount.scss'
 
 const Discount = ({ className, percent }) => (
-  <div className={cx("Discount", className)}>–{percent}%</div>
-);
+  <div className={cx('Discount', className)}>
+    –{percent}%
+  </div>
+)
 
-export default Discount;
+export default Discount

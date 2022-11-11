@@ -1,11 +1,11 @@
 export { default as Header } from './Header'
 export { default as Footer } from './Footer'
-
 export { default as TouchHeader } from './TouchHeader'
 
 export { default as Carousel } from './Carousel'
 export { default as Discount } from './Discount'
 export { default as OldPrice } from './OldPrice'
 export { default as Price } from './Price'
+export { default as Rating } from './Rating/Rating'
 export { default as Counter } from './Counter'
 export { default as SkipToContent } from './SkipToContent'

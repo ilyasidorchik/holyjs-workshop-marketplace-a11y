@@ -8,16 +8,17 @@ import {
   Price,
   OldPrice,
   Discount,
-  Rating,
 } from 'components'
 import {
   Title,
   Button,
   Link,
   Image,
+  
 } from 'uikit/components'
 
-import UpsalePopup from './UpsalePopup'
+import UpsalePopup from '../UpsalePopup'
+import Tooltip from '../Tooltip'
 
 import './Snippet.scss'
 
@@ -49,16 +50,34 @@ const Snippet = ({
     addToWishlist()
   }
 
+  const [visibleHint, isVisibleHint] =
+    useState(false)
+  const showHint = () => {
+    isVisibleHint(true)
+  }
+  const hideHint = () => {
+    isVisibleHint(false)
+  }
+
   return (
     <>
       <div className="Snippet">
         <div className="Snippet-Toolbar">
           <Button
+            className="Snippet-ToolbarButton"
             view="secondary"
             onClick={onWishlistAdd}
+            onMouseOver={showHint}
+            // onFocus={showHint}
+            onMouseOut={hideHint}
+            // onLbur={hideHint}
           >
             ❤
           </Button>
+          <Tooltip
+            className="Snippet-Tooltip"
+            visible={visibleHint}
+          />
         </div>
         <Image
           className="Snippet-Picture"
@@ -97,7 +116,7 @@ const Snippet = ({
 
             <div className="Snippet-Shop">
               <i>Холи</i> ·
-              <Rating value={rating} /> /
+              <div>{rating}</div> /
               <div>{feedbackCount}</div>
             </div>
           </div>

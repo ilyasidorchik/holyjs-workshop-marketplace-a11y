@@ -1,4 +1,5 @@
 import { useContext, useState } from 'react'
+import { useLocation } from 'react-router-dom'
 import cx from 'classnames'
 
 import { AppContext } from 'hooks/useContextData'
@@ -13,6 +14,14 @@ import './TouchHeader.scss'
 const TouchHeader = ({ className }) => {
   const [visible, isVisible] = useState(false)
   const { cartCount } = useContext(AppContext)
+
+  const location = useLocation()
+  const isTouch =
+    location.pathname.includes('touch')
+  let badCodeLink = `/touch/search`
+  if (isTouch) {
+    badCodeLink += '-fixed'
+  }
 
   const toggleMenu = () => {
     isVisible(!visible)
@@ -33,13 +42,15 @@ const TouchHeader = ({ className }) => {
       </Button>
 
       <div>
-        <b>
-          <i>
-            Холи
-            <br />
-            Маркет
-          </i>
-        </b>
+        <Link to={badCodeLink}>
+          <b>
+            <i>
+              Холи
+              <br />
+              Маркет
+            </i>
+          </b>
+        </Link>
       </div>
 
       <Link to="/cart">
