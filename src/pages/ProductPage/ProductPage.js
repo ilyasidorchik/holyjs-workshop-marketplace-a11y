@@ -6,6 +6,7 @@ import {
   OldPrice,
   Discount,
   Carousel,
+  VisuallyHidden,
 } from 'components'
 import {
   List,
@@ -40,6 +41,7 @@ const ProductPage = () => {
         <Title
           className="ProductPage-Title"
           size="l"
+          as="h1"
         >
           Футболка HolyJS
         </Title>
@@ -51,6 +53,7 @@ const ProductPage = () => {
               className="ProductPage-Picture"
               src={ProductPicture}
               alt="Футболка HolyJS"
+              aria-hidden="true"
             />
             <div className="ProductPage-Desc">
               <Title className="ProductPage-Title">
@@ -118,6 +121,10 @@ const ProductPage = () => {
         </div>
 
         <div>
+          <VisuallyHidden>
+            <h2>Все предложения</h2>
+          </VisuallyHidden>
+
           <List className="ProductPage-List">
             <ListItem className="ProductPage-ListItem ProductPage-ListItem_default">
               <div>
@@ -134,7 +141,10 @@ const ProductPage = () => {
                   currency="RUR"
                 />
                 <div className="ProductPage-Shop">
-                  <Icon name="shop" />
+                  <Icon
+                    name="shop"
+                    aria-label="Магазин:"
+                  />
                   <i>Холи</i>
                 </div>
                 <Button onClick={addToCart}>

@@ -24,6 +24,7 @@ const MenuItemIcon = ({
   return (
     <span
       className={cx('MenuItemIcon', className)}
+      aria-hidden="true"
     >
       {Count}
       <IconComponent

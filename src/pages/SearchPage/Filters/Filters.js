@@ -35,7 +35,7 @@ const Filters = ({ className }) => {
           className="SearchPage-Filter"
           key={name}
         >
-          <Title className="SearchPage-FilterTitle">
+          <Title className="SearchPage-FilterTitle" as="h3">
             {FilterTitles[name]}
           </Title>
 

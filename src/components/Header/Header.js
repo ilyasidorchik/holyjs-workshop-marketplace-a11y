@@ -1,4 +1,5 @@
 import { TextField } from 'uikit/components'
+import { SkipToContent } from 'components'
 
 import Menu from './Menu'
 
@@ -7,6 +8,8 @@ import './Header.scss'
 const Header = () => {
   return (
     <div className="Header">
+      <SkipToContent />
+
       <div className="Header-LeftColumn">
         <div>
           <b>

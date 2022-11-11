@@ -83,6 +83,8 @@ const Snippet = ({
           className="Snippet-Picture"
           src={Picture}
           alt={title}
+          // role="presentation"
+          aria-hidden="true"
         />
         <div className="Snippet-Desc">
           <div className="Snippet-DescText">

@@ -8,12 +8,12 @@ export const List = ({
   ...rest
 }) => {
   return (
-    <div
+    <ul
       className={cx('List', className)}
       {...rest}
     >
       {children}
-    </div>
+    </ul>
   )
 }
 
@@ -23,11 +23,11 @@ export const ListItem = ({
   ...rest
 }) => {
   return (
-    <div
+    <li
       className={cx('ListItem', className)}
       {...rest}
     >
       {children}
-    </div>
+    </li>
   )
 }

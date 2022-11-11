@@ -1,0 +1,6 @@
+@import 'uikit/mixins/visually-hidden.scss';
+
+.VisuallyHidden {
+  @include visually-hidden;
+}
+

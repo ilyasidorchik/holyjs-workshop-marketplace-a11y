@@ -4,7 +4,7 @@ import './Title.scss'
 
 const Title = ({
   className,
-  as: Component = 'div',
+  as: Component = 'h2',
   size = 'xs',
   children,
 }) => (
