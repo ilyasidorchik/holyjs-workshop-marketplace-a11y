@@ -40,7 +40,8 @@
         opacity: 0;
         transition: opacity ease-in-out 0.25s;
     }
-    &:hover {
+    &:hover,
+    &:focus-within {
         .Snippet-Toolbar {
             opacity: 1;
         }

@@ -12,7 +12,10 @@ const Menu = () => {
     useContext(AppContext)
 
   return (
-    <div className="Header-Menu">
+    <nav
+      className="Header-Menu"
+      aria-label="Меню"
+    >
       <List className="Header-MenuList">
         <ListItem>
           <MenuItem
@@ -29,7 +32,7 @@ const Menu = () => {
           />
         </ListItem>
       </List>
-    </div>
+    </nav>
   )
 }
 

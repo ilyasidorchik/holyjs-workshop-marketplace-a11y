@@ -1,8 +1,9 @@
 import cx from 'classnames'
+import VisuallyHidden from 'components/VisuallyHidden'
 
 import './Rating.scss'
 
-// const MAX_RATING = 5
+const MAX_RATING = 5
 
 const Rating = ({
   className,
@@ -10,11 +11,17 @@ const Rating = ({
   value,
 }) => {
   return (
-    <Component
-      className={cx('Rating', className)}
-    >
-      {value}
-    </Component>
+    <>
+      <VisuallyHidden>Рейтинг:</VisuallyHidden>
+      <Component
+        className={cx('Rating', className)}
+      >
+        {value}
+      </Component>
+      <VisuallyHidden>
+        из {MAX_RATING}
+      </VisuallyHidden>
+    </>
   )
 }
 

@@ -1,12 +1,19 @@
+@import 'uikit/mixins/focus-ring.scss';
+@import 'uikit/mixins/visually-hidden.scss';
+
 .Radio {
   cursor: pointer;
 
   &-Input {
-    display: none;
+    @include visually-hidden;
 
     &:checked + .Radio-Row .Radio-FakeInput {
       background-color: var(--secondary);
       border-color: var(--warning);
+    }
+
+    &:focus-visible + .Radio-Row .Radio-FakeInput {
+      @include button-focus-ring-border;
     }
   }
 

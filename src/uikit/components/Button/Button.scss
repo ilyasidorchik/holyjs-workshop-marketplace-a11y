@@ -1,3 +1,5 @@
+@import 'uikit/mixins/focus-ring';
+
 .Button {
     padding: 0.6rem 0.9rem;
   
@@ -9,13 +11,14 @@
     font-weight: 600;
   
     cursor: pointer;
-    outline: none;
 
     transition: all .12s ease-out;
 
     &:active {
         transform: scale(.97);
     }
+
+    @include button-focus-ring;
   
     &_view {
         &_default {

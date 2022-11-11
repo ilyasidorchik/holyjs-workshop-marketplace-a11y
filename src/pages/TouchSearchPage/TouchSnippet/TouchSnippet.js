@@ -38,7 +38,7 @@ const TouchSnippet = ({
   return (
     <div
       className="TouchSnippet"
-      role="button"
+      // role="button"
       onClick={addToCart}
     >
       <Image

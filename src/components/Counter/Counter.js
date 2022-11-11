@@ -18,7 +18,7 @@ const Counter = ({
         onClick={onDecrement}
         // Представим, aria-label не прокинется
       >
-        –
+        <span aria-label="Уменьшить">−</span>
       </LegacyButton>
 
       <div>{value}</div>
@@ -28,7 +28,7 @@ const Counter = ({
         onClick={onIncrement}
         // Представим, aria-label не прокинется
       >
-        +
+        <span aria-label="Увеличить">+</span>
       </LegacyButton>
     </div>
   )

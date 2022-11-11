@@ -9,6 +9,7 @@ import {
   OldPrice,
   Discount,
   Rating,
+  VisuallyHidden,
 } from 'components'
 import {
   Title,
@@ -62,23 +63,6 @@ const Snippet = ({
   return (
     <>
       <div className="Snippet">
-        <div className="Snippet-Toolbar">
-          <Button
-            className="Snippet-ToolbarButton"
-            view="secondary"
-            onClick={onWishlistAdd}
-            onMouseOver={showHint}
-            // onFocus={showHint}
-            onMouseOut={hideHint}
-            // onLbur={hideHint}
-          >
-            ❤
-          </Button>
-          <Tooltip
-            className="Snippet-Tooltip"
-            visible={visibleHint}
-          />
-        </div>
         <Image
           className="Snippet-Picture"
           src={Picture}
@@ -117,8 +101,13 @@ const Snippet = ({
             </div>
 
             <div className="Snippet-Shop">
-              <i>Холи</i> ·
-              <Rating value={rating} /> /
+              <i>Холи</i> 
+              <span aria-hidden="true">·</span>
+              <Rating value={rating} />{' '}
+              <span aria-hidden="true">/</span>
+              <VisuallyHidden>
+                Отзывы:
+              </VisuallyHidden>
               <div>{feedbackCount}</div>
             </div>
           </div>
@@ -129,6 +118,24 @@ const Snippet = ({
           >
             В корзину
           </Button>
+        </div>
+
+        <div className="Snippet-Toolbar">
+          <Button
+            className="Snippet-ToolbarButton"
+            view="secondary"
+            onClick={onWishlistAdd}
+            onMouseOver={showHint}
+            onFocus={showHint}
+            onMouseOut={hideHint}
+            onBlur={hideHint}
+          >
+            ❤
+          </Button>
+          <Tooltip
+            className="Snippet-Tooltip"
+            visible={visibleHint}
+          />
         </div>
       </div>
 

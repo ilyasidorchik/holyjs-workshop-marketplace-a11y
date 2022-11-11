@@ -1,12 +1,18 @@
+@import 'uikit/mixins/focus-ring.scss';
+@import 'uikit/mixins/visually-hidden.scss';
+
 .Checkbox {
   cursor: pointer;
 
   &-Input {
-    display: none;
+    @include visually-hidden;
 
     &:checked + .Checkbox-Row .Checkbox-FakeInput {
       background-color: var(--secondary);
       border-color: var(--warning);
+    }
+    &:focus-visible + .Checkbox-Row .Checkbox-FakeInput {
+      @include button-focus-ring-border;
     }
   }
 

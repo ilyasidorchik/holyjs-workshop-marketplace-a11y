@@ -1,10 +1,12 @@
+@import 'uikit/mixins/focus-ring';
+
 .Link {
     color: var(--primary);
     text-decoration: none;
   
     -webkit-user-select: none;
     user-select: none;
-    outline: none;
+    
 
     &_active {
         cursor: default;
@@ -14,4 +16,6 @@
         color: var(--active);
         fill: var(--active);
     }
+
+    @include focus-ring();
 }

@@ -33,10 +33,16 @@ const ProductPage = () => {
         <title>Футболка HolyJS</title>
       </Helmet>
 
-      <div className="App-Layout ProductPage-Breadcrumbs">
-        <Link to="/search">Футболки</Link> ·{' '}
-        <Link to="/search">Холи</Link>
-      </div>
+      <nav className="App-Layout" aria-label="Хлебные крошки">
+        <List className="ProductPage-Breadcrumbs">
+          <ListItem>
+            <Link to="/search">Футболки</Link>
+          </ListItem>
+          <ListItem>
+            <Link to="/search">Холи</Link>
+          </ListItem>
+        </List>
+      </nav>
       <div className="ProductPage-Layout App-Layout">
         <Title
           className="ProductPage-Title"

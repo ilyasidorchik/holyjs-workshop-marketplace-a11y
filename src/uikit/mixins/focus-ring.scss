@@ -1,0 +1,20 @@
+@mixin focus-ring {
+  outline: none;
+  &:focus-visible {
+      outline: 3px solid var(--warning);
+  }
+}
+
+
+@mixin button-focus-ring-border {
+  box-shadow:
+    0 0 0 3px var(--secondary),
+    0 0 0 6px#fc0;
+}
+
+@mixin button-focus-ring {
+  outline: none;
+  &:focus-visible {
+    @include button-focus-ring-border;
+  }
+}

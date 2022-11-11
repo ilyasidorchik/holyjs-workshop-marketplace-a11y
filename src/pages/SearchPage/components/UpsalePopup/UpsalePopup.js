@@ -23,13 +23,13 @@ const UpsalePopup = ({
   const { cartCount, removeFromCart, addToCart } =
     useContext(AppContext)
 
-  if (!visible) {
-    return null
-  }
+  
 
   return (
     <Popup
       className={cx('UpsalePopup', className)}
+      visible={visible}
+      onClose={onClose}
     >
       <Title
         className="UpsalePopup-Title"

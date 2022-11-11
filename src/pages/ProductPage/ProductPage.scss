@@ -6,6 +6,9 @@
 }
 
 .ProductPage-Breadcrumbs {
+  display: flex;
+  // justify-content: space-between;
+  gap: 1rem;
   margin-bottom: 0.5rem;
 }
 
